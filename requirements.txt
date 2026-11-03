@@ -1,0 +1,9 @@
+pandas
+sqlalchemy
+psycopg[binary]
+python-dotenv
+pyarrow
+scikit-learn
+xgboost
+jupyter
+matplotlib

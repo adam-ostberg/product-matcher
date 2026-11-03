@@ -1,0 +1,239 @@
+:root {
+  --bg: #f6f6f4;
+  --card: #ffffff;
+  --text: #1d1d1b;
+  --muted: #74746f;
+  --border: #deded8;
+  --accent: #1f7a4d;
+  --accent-bg: #e3f3ea;
+  --differs: #c0392b;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 16px 32px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: baseline;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.help {
+  margin-left: auto;
+  color: var(--muted);
+}
+
+.center {
+  padding: 64px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.error {
+  color: var(--differs);
+}
+
+.image {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  background: #ecece8;
+}
+
+/* Coop product */
+.coop {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.coop .image {
+  height: 140px;
+}
+
+.store {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.coop h1 {
+  margin: 4px 0 8px;
+  font-size: 22px;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+}
+
+.ean {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 99px;
+  text-transform: none;
+  letter-spacing: 0;
+  background: #ecece8;
+  color: var(--text);
+}
+
+.badge.match {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+button {
+  font: inherit;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.message {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #fdf0e6;
+}
+
+/* ICA candidates */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card:hover {
+  border-color: #b9b9b2;
+}
+
+.card.selected {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.hotkey {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
+  min-width: 22px;
+  padding: 1px 6px;
+  border-radius: 5px;
+  background: var(--text);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card.selected .hotkey {
+  background: var(--accent);
+}
+
+.name {
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.differs {
+  color: var(--differs);
+  font-weight: 600;
+}
+
+.unknown {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.score {
+  margin-top: auto;
+  padding-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .coop {
+    grid-template-columns: 1fr;
+  }
+}
