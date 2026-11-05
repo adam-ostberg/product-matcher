@@ -1,0 +1,5 @@
+{
+  "note": "Held-out test set: labels with test_from_order <= order < test_to_order. Never used for training or tuning; scored once in notebooks/match.ipynb.",
+  "test_from_order": 301,
+  "test_to_order": 501
+}
