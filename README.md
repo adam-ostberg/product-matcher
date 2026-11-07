@@ -100,7 +100,3 @@ python download_data.py --tables public.products coop.products
 
 Then run `notebooks/explore.ipynb`, label in `labeler/` (`pnpm install && pnpm dev`, then open http://localhost:5173),
 and run `train.ipynb`, `results.ipynb` and `match.ipynb`.
-
-## Stack
-
-Python, pandas, scikit-learn, XGBoost, matplotlib, Jupyter · React, Vite · PostgreSQL
