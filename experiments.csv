@@ -5,3 +5,4 @@ timestamp,name,n_products,n_matches,precision,recall,accuracy,threshold,features
 2026-10-22T15:05:49,xgboost_v1,231,142,0.933,0.787,0.844,0.5,"score,rank,score_gap,brand_equal,brand_sim,name_sim,name_jaccard,same_unit,size_ratio,price_ratio",first model
 2026-10-22T15:37:17,baseline_tfidf,281,175,0.667,0.702,0.726,0.7,,"TF-IDF score only, threshold tuned on all labels"
 2026-10-22T15:37:18,xgboost_v1,281,175,0.889,0.749,0.815,0.5,"score,rank,score_gap,brand_equal,brand_sim,name_sim,name_jaccard,same_unit,size_ratio,price_ratio",first model
+2026-11-06T23:27:21,xgboost_v1,281,175,0.884,0.76,0.822,0.5,"score,rank,score_gap,brand_equal,brand_sim,name_sim,name_jaccard,same_unit,size_ratio,price_ratio","same model and labels, rerun after multipack handling was added to size parsing in explore.ipynb"
